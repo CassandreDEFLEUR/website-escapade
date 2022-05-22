@@ -1,0 +1,87 @@
+<html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Site Cass</title>
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+	<ul>
+  		<li><a href="index.html">Accueil</a></li>
+  		<li><a href="a-propos.html">À propos</a></li>
+ 		  <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Nous contacter</a></li>
+	</ul>
+</head>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img id="acceuil" src="images/logo-adapted.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img id="acceuil" src="images/boite-adapted.jpg" style="width:100%">
+  </div>
+
+  <a style="text-align: center;">
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+
+<div id=text>
+	<h1>ESCAPADE</h1>
+	 <h2>Faire le tour du monde depuis chez soi</h2>
+	<p></p>
+  <p></p>
+  <P>_____________________</P>
+  <p></p>
+  <p></p>
+  <h2>Notre histoire</h2>
+  <h3>Pour ceux qui adorent offrir un bon moment</h3>
+  <p>Depuis notre entrée en grande école, nous n'avons plus le même temps à acorder à nos familles et plus partciulièrement, à ceux qui vivent loin, comme nos grands-parents. Et même si un petit mot ou un coup de fil de temps en temps fait toujours plaisir, ce n'est pas assez pour montrer à nos aînés que l'on pense à eux.</p>
+  <p>C'est pourquoi, nous avons eu l'idée d'Escapade : Un cofrret que l'on peut envoyer à ses êtres chers pour les faire voyager sans à avoir à se déplacer. Culture, littérature, architecture, gastronomie, musique ... tout y est pour que le voyage soit complet !</p>
+	<p>Chez Escapade, nous souhaitons apporter du bonheur aux personnes qui en ont le plus besoin. 
+Notre coffret est un voyage à partager avec vos amis ou votre famille, en particulier avec vos parents et grands-parents, notre startup  vise à redonner le sourire à des personnes souvent isolées et seules. </p>
+</div>
+
+<div id="bas-de-page">
+	<a target=_blank href="https://www.instagram.com/escapade.officiel/?hl=fr">
+		<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=30x10000:format=png/path/s444739841ac2ddbb/image/i08c0e98804d781b2/version/1509560048/image.png">
+	</a>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
